@@ -8,6 +8,10 @@ module.exports = {
         "2Medium-Gray": "hsl(0, 0%, 41%)",
         "3Almost-Black": "hsl(0, 0%, 8%)",
       },
+      backgroundImage: {
+        "small-image": 'url("/images/image-hero-mobile.png")',
+        "large-image": 'url("/images/image-hero-desktop.png")',
+      },
     },
   },
   plugins: [],
