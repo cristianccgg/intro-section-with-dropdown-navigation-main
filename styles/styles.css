@@ -4,9 +4,30 @@
 
 main {
   height: 100vh;
-  width: 100%;
 }
 
-.contenedor {
-  border: red solid;
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  height: 60px; /* Ajusta este valor según el tamaño de tu logo */
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
