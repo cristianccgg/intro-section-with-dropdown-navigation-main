@@ -1,19 +1,46 @@
-const dropDown = document.getElementById("navbar-dropdown");
+const dropDown = document.getElementById("dropdown");
 const hamBtn = document.getElementById("ham-btn");
-
-const dropDownMenuBtn = document.getElementById("dropdownNavbarLink");
-const dropDownMenuBtn1 = document.getElementById("dropdownNavbarLink1");
-const dropDownLink = document.querySelector(".dropdownNavbar");
-const dropDownLink1 = document.querySelector(".dropdownNavbar1");
+const xBtn = document.getElementById("x-btn");
+const arrowDownFeatures = document.getElementById("arrow-features");
+const featuresDropdown = document.getElementById("features-dropdown");
+const arrowUpFeatures = document.getElementById("features-up");
+const arrowCompanyDown = document.getElementById("arrow-company-down");
+const arrowCompanyUp = document.getElementById("arrow-company-up");
+const companyDropDown = document.getElementById("company-dropdown");
+const container = document.querySelector(".contenedor");
 
 hamBtn.addEventListener("click", () => {
-  dropDown.classList.toggle("hidden");
+  dropDown.classList.remove("hidden");
+  hamBtn.classList.add("hidden");
+  container.classList.add("backdrop-contrast-50");
 });
 
-dropDownMenuBtn.addEventListener("click", () => {
-  dropDownLink.classList.toggle("hidden");
+xBtn.addEventListener("click", () => {
+  dropDown.classList.add("hidden");
+  hamBtn.classList.remove("hidden");
+  container.classList.remove("backdrop-contrast-50");
 });
 
-dropDownMenuBtn1.addEventListener("click", () => {
-  dropDownLink1.classList.toggle("hidden");
+arrowDownFeatures.addEventListener("click", () => {
+  featuresDropdown.classList.toggle("hidden");
+  arrowDownFeatures.classList.add("hidden");
+  arrowUpFeatures.classList.remove("hidden");
+});
+
+arrowUpFeatures.addEventListener("click", () => {
+  featuresDropdown.classList.toggle("hidden");
+  arrowDownFeatures.classList.remove("hidden");
+  arrowUpFeatures.classList.add("hidden");
+});
+
+arrowCompanyDown.addEventListener("click", () => {
+  companyDropDown.classList.toggle("hidden");
+  arrowCompanyDown.classList.add("hidden");
+  arrowCompanyUp.classList.remove("hidden");
+});
+
+arrowCompanyUp.addEventListener("click", () => {
+  companyDropDown.classList.toggle("hidden");
+  arrowCompanyDown.classList.remove("hidden");
+  arrowCompanyUp.classList.add("hidden");
 });

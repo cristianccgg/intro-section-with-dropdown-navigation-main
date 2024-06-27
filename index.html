@@ -20,172 +20,98 @@
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
   <body>
-    <main class="flex flex-col justify-center relative">
-      <nav class="border-gray-200 p-4">
-        <div
-          class="flex items-center justify-between sm:justify-between sm:gap-8"
+    <main id="main" class="flex flex-col justify-center">
+      <nav class="flex justify-between items-center relative p-6 z-10">
+        <img src="/images/logo.svg" alt="logo" />
+        <button id="ham-btn" class="sm:hidden">
+          <img src="/images/icon-menu.svg" alt="ham-btn" />
+        </button>
+        <ul
+          id="dropdown"
+          class="hidden sm:flex bg-white sm:bg-transparent sm:static absolute top-0 right-0 w-60 sm:w-full p-5 sm:p-0 sm:px-6 flex-col sm:flex-row justify-around items-center sm:justify-between"
         >
-          <a href="#" class="navbar-logo">
-            <img src="/images/logo.svg" class="h-6" alt="Logo" />
-          </a>
-          <button
-            id="ham-btn"
-            data-collapse-toggle="navbar-dropdown"
-            type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-            aria-controls="navbar-dropdown"
-            aria-expanded="false"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
-          </button>
+          <img
+            id="x-btn"
+            class="w-5 absolute top-5 right-5 sm:hidden"
+            src="/images/icon-close-menu.svg"
+            alt="icon-close"
+          />
           <div
-            id="navbar-dropdown"
-            class="hidden w-full sm:flex sm:w-full sm:items-center sm:justify-between"
+            class="flex flex-col sm:flex-row sm:gap-6 mt-12 sm:mt-0 gap-5 justify-between"
           >
-            <ul
-              class="flex flex-col font-medium p-4 md:p-0 mt-4 border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:bg-white"
-            >
-              <li class="dropdown">
-                <button
-                  class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto"
-                >
-                  Features
-                  <svg
-                    class="w-2.5 h-2.5 ms-2.5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="m1 1 4 4 4-4"
-                    />
-                  </svg>
-                </button>
-                <div class="dropdown-menu">
-                  <ul class="py-2 px-3 text-sm text-gray-700">
-                    <li class="flex">
-                      <img src="/images/icon-todo.svg" alt="icon-todo" />
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                        >Dashboard</a
-                      >
-                    </li>
-                    <li class="flex">
-                      <img src="/images/icon-calendar.svg" alt="" />
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                        >Settings</a
-                      >
-                    </li>
-                    <li class="flex">
-                      <img src="/images/icon-reminders.svg" alt="" />
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                        >Earnings</a
-                      >
-                    </li>
-                  </ul>
-                </div>
+            <div>
+              <li class="text-left flex gap-3">
+                Features<img
+                  class="h-3 w-5 self-center"
+                  id="arrow-features"
+                  src="/images/icon-arrow-down.svg"
+                  alt="icon-arrow-down"
+                />
+                <img
+                  id="features-up"
+                  class="hidden h-3 w-5 self-center"
+                  src="/images/icon-arrow-up.svg"
+                  alt="icon-arrow-up"
+                />
               </li>
-              <li class="dropdown">
-                <button
-                  class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto"
-                >
-                  Company
-                  <svg
-                    class="w-2.5 h-2.5 ms-2.5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="m1 1 4 4 4-4"
-                    />
-                  </svg>
-                </button>
-                <div class="dropdown-menu">
-                  <ul class="py-2 text-sm text-gray-70">
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                        >History</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                        >Our Team</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                        >Blog</a
-                      >
-                    </li>
-                  </ul>
-                </div>
+              <ul
+                id="features-dropdown"
+                class="sm:absolute ms-5 hidden space-y-2 py-2"
+              >
+                <li class="flex gap-2">
+                  <img src="/images/icon-todo.svg" />Todo List
+                </li>
+                <li class="flex gap-2">
+                  <img src="/images/icon-calendar.svg" />Calendar
+                </li>
+                <li class="flex gap-2">
+                  <img src="/images/icon-reminders.svg" />Reminders
+                </li>
+                <li class="flex gap-2">
+                  <img src="/images/icon-planning.svg" />Planning
+                </li>
+              </ul>
+            </div>
+            <div>
+              <li class="text-left flex gap-2">
+                Company<img
+                  class="h-3 w-5 self-center"
+                  id="arrow-company-down"
+                  src="/images/icon-arrow-down.svg"
+                  alt="icon-arrow-down"
+                />
+                <img
+                  id="arrow-company-up"
+                  class="hidden h-3 w-5 self-center"
+                  src="/images/icon-arrow-up.svg"
+                  alt="icon-arrow-up"
+                />
               </li>
-              <li>
-                <a
-                  href="#"
-                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-                  >Careers</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-                  >About</a
-                >
-              </li>
-            </ul>
-            <ul class="flex items-center gap-8 justify-end">
-              <li>
-                <a
-                  href="#"
-                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-                  >Login</a
-                >
-              </li>
-              <li>
-                <button class="border-2 rounded-lg px-3 py-1">
-                  <a
-                    href="#"
-                    class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-                    >Register</a
-                  >
-                </button>
-              </li>
-            </ul>
+              <ul
+                id="company-dropdown"
+                class="sm:absolute ms-5 hidden space-y-2 py-2"
+              >
+                <li class="flex gap-2">History</li>
+                <li class="flex gap-2">Our Team</li>
+                <li class="flex gap-2">Blog</li>
+              </ul>
+            </div>
+            <li>Carreers</li>
+            <li>About</li>
           </div>
-        </div>
+          <div
+            class="mx-auto text-center sm:mx-0 sm:flex sm:gap-6 sm:items-center"
+          >
+            <li>Login</li>
+            <li class="border-2 rounded-lg px-3 py-2">Register</li>
+          </div>
+        </ul>
       </nav>
       <div
-        class="contenedor flex flex-col gap-3 sm:gap-8 sm:grid sm:grid-cols-2 sm:mx-28 h-full sm:my-32 sm:h-full sm:items-center"
+        class="contenedor flex flex-col gap-3 sm:gap-8 sm:grid sm:grid-cols-2 sm:mx-28 h-full sm:mt-18 sm:mb-32 sm:h-full sm:items-center"
       >
         <section
-          class="sm:mt-0 sm:h-full sm:col-auto sm:order-2 sm:bg-large-image bg-no-repeat bg-small-image bg-center bg-contain h-64 w-full mt-24"
+          class="sm:h-full sm:col-auto sm:order-2 sm:bg-large-image bg-no-repeat bg-small-image bg-center bg-contain h-64 w-full sm:mt-24"
         ></section>
         <section
           class="sm:col-auto sm:h-full flex flex-col p-6 items-center sm:items-start gap-5 sm:justify-center w-full"
